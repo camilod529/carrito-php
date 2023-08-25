@@ -3,3 +3,4 @@
 ### Autores:
 
 - Camilo Alberto Duran Ferreira
+- José Alfredo Acosta Paez
