@@ -47,7 +47,7 @@
                             </li>
 
                             <li class="active-menu">
-                                <a href="shoppingcart.php">Carrito Compra</a>
+                                <a href="shoppingcart.php">Carrito de Compra</a>
                             </li>
                         </ul>
                     </div>

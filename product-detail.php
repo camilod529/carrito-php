@@ -48,7 +48,7 @@
                             </li>
 
                             <li>
-                                <a href="shoping-cart.php">Carrito Compra</a>
+                                <a href="shoping-cart.php">Carrito de Compra</a>
                             </li>
                         </ul>
                     </div>
