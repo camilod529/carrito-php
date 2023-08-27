@@ -42,11 +42,11 @@
                                 <a href="index.php">Inicio</a>
                             </li>
 
-                            <li class="active-menu">
+                            <li>
                                 <a href="product.php">Productos</a>
                             </li>
 
-                            <li>
+                            <li class="active-menu">
                                 <a href="shoppingcart.php">Carrito Compra</a>
                             </li>
                         </ul>
