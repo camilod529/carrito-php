@@ -4,3 +4,5 @@
 
 - Camilo Alberto Duran Ferreira
 - José Alfredo Acosta Paez
+- Arley Ricardo Parra Rojas
+- Juan Felipe Cabanzo Mogollon
