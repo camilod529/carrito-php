@@ -1,43 +1,30 @@
-<?php
-class CarritoDeCompras
-{
-    private $productos = array();
-
-    public function agregarProducto($producto)
-    {
-        $this->productos[] = $producto;
-    }
-
-    public function eliminarProducto($indice)
-    {
-        if (isset($this->productos[$indice])) {
-            unset($this->productos[$indice]);
-            $this->productos = array_values($this->productos); // Reindexar el array
-        }
-    }
-
-    public function obtenerProductos()
-    {
-        return $this->productos;
-    }
-}
-
-// Instancia del carrito de compras
-$carrito = new CarritoDeCompras();
-
-// Agregar productos al carrito
-$producto1 = "Producto 1";
-$producto2 = "Producto 2";
-$carrito->agregarProducto($producto1);
-$carrito->agregarProducto($producto2);
-
-// Lista de productos en el carrito
-$productosEnCarrito = $carrito->obtenerProductos();
-print_r($productosEnCarrito);
-
-// Eliminar un producto del carrito
-$carrito->eliminarProducto(0);
-
-// Lista actualizada de productos en el carrito
-$productosEnCarrito = $carrito->obtenerProductos();
-print_r($productosEnCarrito);
+<?php return array (
+  0 => 
+  \Product::__set_state(array(
+     'name' => 'Portatil Asus E1504fa-nj474',
+     'price' => 2100000.0,
+     'img' => 'images/product-01.jpg',
+     'stock' => 10,
+  )),
+  1 => 
+  \Product::__set_state(array(
+     'name' => 'Monitor Samsung Ls22a33anhlxzl',
+     'price' => 564000.0,
+     'img' => 'images/product-02.jpg',
+     'stock' => 20,
+  )),
+  2 => 
+  \Product::__set_state(array(
+     'name' => 'Mouse Logitech G3000S',
+     'price' => 60000.0,
+     'img' => 'images/product-03.jpg',
+     'stock' => 2,
+  )),
+  3 => 
+  \Product::__set_state(array(
+     'name' => 'Apple iPhone 11 (64 GB)',
+     'price' => 2300000.0,
+     'img' => 'images/product-04.jpg',
+     'stock' => 4,
+  )),
+);
