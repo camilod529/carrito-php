@@ -6,14 +6,15 @@ class Product
     private float $price;
     private string $img;
     private int $stock;
+    private string $text;
 
-
-    public function __construct($name, $price, $img, $stock)
+    public function __construct($name, $price, $img, $stock, $text)
     {
         $this->name = $name;
         $this->price = $price;
         $this->img = $img;
         $this->stock = $stock;
+        $this->text = $text;
     }
 
 
@@ -83,13 +84,16 @@ class Product
     }
 
     public static function __set_state($data)
-    {
-        $product = new Product('', 1, '', 0);
-        foreach ($data as $key => $value) {
+{
+    $product = new Product('', 1, '', 0, ''); // Initialize with default values or actual default values
+    foreach ($data as $key => $value) {
+        if (property_exists($product, $key)) {
             $product->$key = $value;
         }
-        return $product;
     }
+    return $product;
+}
+
 
     /**
      * Get the value of stock
@@ -107,6 +111,23 @@ class Product
     public function setStock($stock)
     {
         $this->stock = $stock;
+
+        return $this;
+    }
+
+    public function getText()
+    {
+        return $this->text;
+    }
+
+    /**
+     * Set the value of stock
+     *
+     * @return  self
+     */
+    public function setText($text)
+    {
+        $this->text = $text;
 
         return $this;
     }
