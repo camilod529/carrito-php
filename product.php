@@ -77,14 +77,12 @@ session_start();
                     require_once './models/Products.php';
 
                     $aux = new Products();
-                    $aux->addProduct(new Product("Portatil Asus E1504fa-nj474", 2100000, "images/product-01.jpg", 10), 0);
-                    $aux->addProduct(new Product("Monitor Samsung Ls22a33anhlxzl", 564000, "images/product-02.jpg", 20), 1);
-                    $aux->addProduct(new Product("Mouse Logitech G3000S", 60000, "images/product-03.jpg", 2), 2);
-                    $aux->addProduct(new Product("Apple iPhone 11 (64 GB)", 2300000, "images/product-04.jpg", 4), 3);
-                    $aux->addProduct(new Product("Portatilaasd Asus E1504fa-nj474", 2100000, "images/product-01.jpg", 10), 4);
-                    $aux->addProduct(new Product("Portatilaasd Asus E1504fa-nj474", 2100000, "images/product-01.jpg", 10), 5);
-                    $aux->addProduct(new Product("Portatilaasd Asus E1504fa-nj474", 2100000, "images/product-01.jpg", 10), 6);
-                    $aux->addProduct(new Product("Portatilaasd Asus E1504fa-nj474", 2100000, "images/product-01.jpg", 10), 7);
+                    $aux->addProduct(new Product("Portatil Asus E1504fa-nj474", 2100000, "images/product-01.jpg", 10, "                        Disfruta de la perfecta combinación de rendimiento y diseño con este ordenador Asus Vivobook 15 E1504FA-NJ474. Encontrarás en él una excelente herramienta para tus trabajos de todos los días y para tus momentos de entretenimiento.
+                    "), 0);
+                    $aux->addProduct(new Product("Monitor Samsung Ls22a33anhlxzl", 564000, "images/product-02.jpg", 20,"Disfruta de una experiencia visual excepcional con el Monitor Samsung LS22A33ANHLXZL. Este monitor te ofrece una calidad de imagen impresionante y un diseño elegante que complementará tu espacio de trabajo o entretenimiento. Experimenta colores vibrantes y claridad en cada detalle."), 1);
+                    $aux->addProduct(new Product("Mouse Logitech G3000S", 60000, "images/product-03.jpg", 2,"Experimenta un control preciso y una comodidad excepcional con el Mouse Logitech G3000S. Este mouse está diseñado para jugadores y profesionales que buscan un rendimiento óptimo. Con sus botones programables y sensor de alta precisión, podrás dominar tus juegos y tareas con facilidad."), 2);
+                    $aux->addProduct(new Product("Apple iPhone 11 (64 GB)", 2300000, "images/product-04.jpg", 4,"Descubre la potencia y la elegancia en un solo dispositivo con el Apple iPhone 11 (64 GB). Este smartphone de Apple combina un rendimiento excepcional con una cámara avanzada y una pantalla impresionante. Captura fotos y videos increíbles, disfruta de aplicaciones fluidas y sumérgete en una experiencia multimedia de alta calidad."), 3);
+                    
                     $productos = $aux->getProducts();
                     file_put_contents('cart.php', '<?php return ' . var_export($productos, true) . ';');
                     foreach ($productos as $valor) {
@@ -102,7 +100,7 @@ session_start();
                                     <div class="block2-txt-child1 flex-col-l ">
                                     
 
-                                        <a href="proceso_actualizar_product-detail.php?param1=<?php echo $valor->getName(); ?>&param2=<?php echo $valor->getPrice(); ?>&param3=<?php echo $valor->getImg(); ?>"
+                                        <a href="proceso_actualizar_product-detail.php?param1=<?php echo $valor->getName(); ?>&param2=<?php echo $valor->getPrice(); ?>&param3=<?php echo $valor->getImg(); ?>&param4=<?php echo $valor->getText(); ?>"
                                             class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
                                             <?php echo $valor->getName() ?>
                                         </a>

@@ -19,6 +19,7 @@ if (isset($_GET['param1']) && isset($_GET['param2'])) {
     $param1 = $_GET['param1'];
     $param2 = $_GET['param2'];
     $param3 = $_GET['param3'];
+    $param4 = $_GET['param4'];
 
     // Perform any necessary validation and sanitation of input data here
 
@@ -31,7 +32,7 @@ if (isset($_GET['param1']) && isset($_GET['param2'])) {
     } else {
         echo "Error deleting rows: " . $conn->error;
     }
-    $sql = "INSERT INTO producto_actual (nombre_prod, precio, texto,imagen) VALUES ('$param1', '$param2','asd','$param3')";
+    $sql = "INSERT INTO producto_actual (nombre_prod, precio, texto,imagen) VALUES ('$param1', '$param2','$param4','$param3')";
     if ($conn->query($sql) === TRUE) {
         echo "MySQL script executed successfully!";
     } else {
