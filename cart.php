@@ -27,4 +27,32 @@
      'img' => 'images/product-04.jpg',
      'stock' => 4,
   )),
+  4 => 
+  \Product::__set_state(array(
+     'name' => 'Portatilaasd Asus E1504fa-nj474',
+     'price' => 2100000.0,
+     'img' => 'images/product-01.jpg',
+     'stock' => 10,
+  )),
+  5 => 
+  \Product::__set_state(array(
+     'name' => 'Portatilaasd Asus E1504fa-nj474',
+     'price' => 2100000.0,
+     'img' => 'images/product-01.jpg',
+     'stock' => 10,
+  )),
+  6 => 
+  \Product::__set_state(array(
+     'name' => 'Portatilaasd Asus E1504fa-nj474',
+     'price' => 2100000.0,
+     'img' => 'images/product-01.jpg',
+     'stock' => 10,
+  )),
+  7 => 
+  \Product::__set_state(array(
+     'name' => 'Portatilaasd Asus E1504fa-nj474',
+     'price' => 2100000.0,
+     'img' => 'images/product-01.jpg',
+     'stock' => 10,
+  )),
 );

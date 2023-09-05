@@ -81,7 +81,10 @@ session_start();
                     $aux->addProduct(new Product("Monitor Samsung Ls22a33anhlxzl", 564000, "images/product-02.jpg", 20), 1);
                     $aux->addProduct(new Product("Mouse Logitech G3000S", 60000, "images/product-03.jpg", 2), 2);
                     $aux->addProduct(new Product("Apple iPhone 11 (64 GB)", 2300000, "images/product-04.jpg", 4), 3);
-
+                    $aux->addProduct(new Product("Portatilaasd Asus E1504fa-nj474", 2100000, "images/product-01.jpg", 10), 4);
+                    $aux->addProduct(new Product("Portatilaasd Asus E1504fa-nj474", 2100000, "images/product-01.jpg", 10), 5);
+                    $aux->addProduct(new Product("Portatilaasd Asus E1504fa-nj474", 2100000, "images/product-01.jpg", 10), 6);
+                    $aux->addProduct(new Product("Portatilaasd Asus E1504fa-nj474", 2100000, "images/product-01.jpg", 10), 7);
                     $productos = $aux->getProducts();
                     file_put_contents('cart.php', '<?php return ' . var_export($productos, true) . ';');
                     foreach ($productos as $valor) {
@@ -97,7 +100,9 @@ session_start();
                                 </div>
                                 <div class="block2-txt flex-w flex-t p-t-14">
                                     <div class="block2-txt-child1 flex-col-l ">
-                                        <a href="product-detail.php"
+                                    
+
+                                        <a href="proceso_actualizar_product-detail.php?param1=<?php echo $valor->getName(); ?>&param2=<?php echo $valor->getPrice(); ?>&param3=<?php echo $valor->getImg(); ?>"
                                             class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
                                             <?php echo $valor->getName() ?>
                                         </a>

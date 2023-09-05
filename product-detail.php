@@ -1,3 +1,36 @@
+<?php
+$host = "localhost";
+$username = "root";
+$password = "";
+$database = "carrito";
+
+// Create a connection to the database
+$conn = new mysqli($host, $username, $password, $database);
+
+// Check the connection
+
+// SQL query to retrieve data from the table
+$sql = "SELECT * FROM producto_actual LIMIT 1";
+
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // Fetch the row as an associative array
+    $row = $result->fetch_assoc();
+
+    // Access data from the row
+    $nombre_prod = $row['nombre_prod'];
+    $precio = $row['precio'];
+	$texto = $row['texto'];
+    $imagen = $row['imagen'];
+
+    // Display or use the data as needed
+   
+} 
+
+// Close the database connection
+$conn->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -93,33 +126,17 @@
 							<div class="slick3 gallery-lb">
 								<div class="item-slick3" data-thumb="images/product-detail-01.jpg">
 									<div class="wrap-pic-w pos-relative">
-										<img src="images/product-detail-01.jpg" alt="IMG-PRODUCT">
+										<img src="<?php echo $imagen; ?>" alt="IMG-PRODUCT">
 
-										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="images/product-detail-01.jpg">
+										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="<?php echo $imagen; ?>">
 											<i class="fa fa-expand"></i>
 										</a>
 									</div>
 								</div>
 
-								<div class="item-slick3" data-thumb="images/product-detail-02.jpg">
-									<div class="wrap-pic-w pos-relative">
-										<img src="images/product-detail-02.jpg" alt="IMG-PRODUCT">
+								
 
-										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="images/product-detail-02.jpg">
-											<i class="fa fa-expand"></i>
-										</a>
-									</div>
-								</div>
-
-								<div class="item-slick3" data-thumb="images/product-detail-03.jpg">
-									<div class="wrap-pic-w pos-relative">
-										<img src="images/product-detail-03.jpg" alt="IMG-PRODUCT">
-
-										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="images/product-detail-03.jpg">
-											<i class="fa fa-expand"></i>
-										</a>
-									</div>
-								</div>
+								
 							</div>
 						</div>
 					</div>
@@ -127,12 +144,14 @@
 					
 				<div class="col-md-6 col-lg-5 p-b-30">
 					<div class="p-r-50 p-t-5 p-lr-0-lg">
+				
+
 						<h4 class="mtext-105 cl2 js-name-detail p-b-14">
-							Portatil Asus E1504fa-nj474
+						<?php echo $nombre_prod; ?>
 						</h4>
 
 						<span class="mtext-106 cl2">
-							$2.100.000
+							$<?php echo $precio; ?>
 						</span>
 
 						<p class="stext-102 cl3 p-t-23">
